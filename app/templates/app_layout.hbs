@@ -1,0 +1,16 @@
+<div id="subbar">
+  <div id="appTitle">
+    {{model.name}}
+  </div>
+  <ul id="appTabs">
+    <li>{{link-to 'Builder' 'app.builder' model}}</li>
+    <li>{{link-to 'Docs' 'app.docs' model}}</li>
+    <li>{{link-to 'Data' 'app.data' model}}</li>
+    <li>{{link-to 'Settings' 'app.settings' model}}</li>
+  </ul>
+  <div id="builderSettings">
+    <i class="fa fa-cog"></i>
+  </div>
+</div>
+
+{{outlet}}
