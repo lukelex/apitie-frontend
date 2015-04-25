@@ -20,9 +20,18 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.contentSecurityPolicy = {
+      'default-src': "'none'",
+      'script-src': "'self' *",
+      'font-src': "'self' *",
+      'style-src': "'self' *",
+      'connect-src': "'self' *",
+      'img-src': "'self' *",
+      'media-src': "'self'"
+    }
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
