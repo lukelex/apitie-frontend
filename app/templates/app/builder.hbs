@@ -3,56 +3,28 @@
     <i class="fa fa-search"></i><input placeholder="Search" type="text" />
   </div>
   {{#each entity in model.entities}}
-    <aside>
+    <aside class='open'>
       <h3>
         <i class="fa fa-sort-desc"></i> {{entity.name}}
       </h3>
       <ul class="table-list">
-        <li>
-        <i class="fa fa-database"></i> id <i class="fa fa-info"></i>
-        </li>
-        <li>
-        <i class="fa fa-font"></i> username <i class="fa fa-info"></i>
-        </li>
-        <li>
-        <i class="fa fa-font"></i> email <i class="fa fa-info"></i>
-        </li>
+        {{#each field in entity.fields}}
+          {{#field-label field=field}}
+            <i class="fa fa-info"></i>
+          {{/field-label}}
+        {{/each}}
       </ul>
     </aside>
   {{/each}}
 
-  <a class="newtable" href="#">New table</a>
+  <a class="newtable" href="#">New entity</a>
 </nav>
 
 <section id="contentHolder">
   <div class="row">
     <div class="tableWrapper">
       {{#each entity in model.entities}}
-      <div class="table">
-        <h2>
-          {{entity.name}}
-        </h2>
-        <ul>
-          <li>
-          <i class="fa fa-database"></i> id
-          </li>
-          <li>
-          <i class="fa fa-font"></i> username
-          </li>
-          <li>
-          <i class="fa fa-font"></i> email
-          </li>
-          <li>
-          <i class="fa fa-font"></i> firstname
-          </li>
-          <li>
-          <i class="fa fa-font"></i> lastname
-          </li>
-          <li class="more">
-          <span>+3 more</span>
-          </li>
-        </ul>
-      </div>
+        {{view 'builder.preview.entity'}}
       {{/each}}
     </div>
   </div>

@@ -1,0 +1,10 @@
+<h2>
+  {{entity.name}}
+</h2>
+<ul>
+  {{#each field in entity.fields}}
+    {{field-label field=field}}
+  {{/each}}
+
+  <li class="more"><span>+3 more</span></li>
+</ul>
