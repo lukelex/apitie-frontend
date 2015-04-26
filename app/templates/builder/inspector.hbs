@@ -1,58 +1,76 @@
 <div id="iModal">
   <i class="fa fa-info"></i>
-  <i class="fa fa-times" {{action 'closeModal'}}></i>
+  <i class="fa fa-times" {{action 'cancel'}}></i>
   <h2>
-    {{entity.name}}#<span>{{field}}</span>
+    {{model.entity.name}}#<span>{{model.name}}</span>
   </h2>
   <div class="options">
     <ul id="listOne">
       <li>
-        <input checked="checked" id="text" name="type" type="radio" />
-        <label for="text">
+        {{#unless model.internal}}
+          <input id="type-text" {{bind-attr disabled='internal'}} name="type" type="radio" value="text"/>
+        {{/unless}}
+        <label for="type-text">
           <i class="fa fa-font"></i> Text
         </label>
       </li>
       <li>
-        <input id="number" name="type" type="radio" />
-        <label for="number">
-          <i class="fa fa-database"></i> Number
+        {{#unless model.internal}}
+          <input id="type-number" name="type" type="radio" value="text"/>
+        {{/unless}}
+        <label for="type-number">
+          <i class="fa fa-calculator"></i> Number
         </label>
       </li>
       <li>
-        <input id="datetime" name="type" type="radio" />
-        <label for="datetime">
-          <i class="fa fa-font"></i> Date Time
+        {{#unless model.internal}}
+          <input id="type-datetime" name="type" type="radio" value="datetime"/>
+        {{/unless}}
+        <label for="type-datetime">
+          <i class="fa fa-calendar"></i> Date Time
         </label>
       </li>
       <li>
-        <input id="file" name="type" type="radio" />
-        <label for="file">
-          <i class="fa fa-font"></i> File
+        {{#unless model.internal}}
+          <input id="type-file" name="type" type="radio" value="file"/>
+        {{/unless}}
+        <label>
+          <i class="fa fa-file"></i> File
         </label>
       </li>
     </ul>
     <ul id="listTwo">
       <li>
-        <input id="presence" type="checkbox" checked="checked" />
-        <label for="presence">Presence</label>
+        <label>
+          {{input type='checkbox' checked=hasPresence disabled=internal}}
+          Presence
+        </label>
       </li>
       <li>
-        <input id="size" type="checkbox" />
-        <label for="size">Size</label>
+        <label>
+          {{input type='checkbox' checked=hasUniqueness disabled=internal}}
+          Uniqueness
+        </label>
       </li>
       <li>
-        <input id="uniqueness" type="checkbox" />
-        <label for="uniqueness">Uniqueness</label>
+        <label>
+          {{input type='checkbox' checked=hasSize disabled=internal}}
+          Size
+        </label>
       </li>
       <li>
-        <input id="format" type="checkbox" />
-        <label for="format">Format</label>
+        <label>
+          {{input type='checkbox' checked=hasFormat disabled=internal}}
+          Format
+        </label>
       </li>
     </ul>
     <div class="actions">
-      <a class="btn delete" href="#" {{action 'deleteField'}}>Delete</a>
-      <a class="btn save" href="#" {{action 'saveField'}}>Save</a>
-      <a class="btn cancel" href="#" {{action 'closeModal'}}>Cancel</a>
+      {{#unless isInternal}}
+        <a class="btn delete" href="#" {{action 'deleteField'}}>Delete</a>
+        <a class="btn save" href="#" {{action 'saveField'}}>Save</a>
+      {{/unless}}
+      <a class="btn cancel" href="#" {{action 'cancel'}}>Cancel</a>
     </div>
   </div>
 </div>
