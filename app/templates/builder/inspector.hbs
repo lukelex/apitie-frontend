@@ -7,33 +7,46 @@
   <div class="options">
     <ul id="listOne">
       <li>
-      <input id="string" name="tableType" type="radio" /><label for="string"><i class="fa fa-font"></i> String</label>
+        <input checked="checked" id="text" name="type" type="radio" />
+        <label for="text">
+          <i class="fa fa-font"></i> Text
+        </label>
       </li>
       <li>
-      <input checked="checked" id="integer" name="tableType" type="radio" /><label for="integer"><i class="fa fa-font"></i> Integer</label>
+        <input id="number" name="type" type="radio" />
+        <label for="number">
+          <i class="fa fa-database"></i> Number
+        </label>
       </li>
       <li>
-      <input id="date" name="tableType" type="radio" /><label for="date"><i class="fa fa-font"></i> Date</label>
+        <input id="datetime" name="type" type="radio" />
+        <label for="datetime">
+          <i class="fa fa-font"></i> Date Time
+        </label>
       </li>
       <li>
-      <input id="float" name="tableType" type="radio" /><label for="float"><i class="fa fa-database"></i> Float</label>
-      </li>
-      <li>
-      <input id="file" name="tableType" type="radio" /><label for="file"><i class="fa fa-font"></i> File</label>
+        <input id="file" name="type" type="radio" />
+        <label for="file">
+          <i class="fa fa-font"></i> File
+        </label>
       </li>
     </ul>
     <ul id="listTwo">
       <li>
-      <input id="presence" type="checkbox" /><label for="presence">Presence</label>
+        <input id="presence" type="checkbox" checked="checked" />
+        <label for="presence">Presence</label>
       </li>
       <li>
-      <input id="size" type="checkbox" /><label for="size">Size</label>
+        <input id="size" type="checkbox" />
+        <label for="size">Size</label>
       </li>
       <li>
-      <input id="uniqueness" type="checkbox" /><label for="uniqueness">Uniqueness</label>
+        <input id="uniqueness" type="checkbox" />
+        <label for="uniqueness">Uniqueness</label>
       </li>
       <li>
-      <input id="format" type="checkbox" /><label for="format">Format</label>
+        <input id="format" type="checkbox" />
+        <label for="format">Format</label>
       </li>
     </ul>
     <div class="actions">
