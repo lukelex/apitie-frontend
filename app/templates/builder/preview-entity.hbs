@@ -6,5 +6,7 @@
     {{field-label field=field}}
   {{/each}}
 
-  <li class="more"><span>+3 more</span></li>
+  {{#if model.hasLotsOfFields}}
+    <li class="more"><span>+3 more</span></li>
+  {{/if}}
 </ul>

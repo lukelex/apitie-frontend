@@ -3,18 +3,7 @@
     <i class="fa fa-search"></i><input placeholder="Search" type="text" />
   </div>
   {{#each entity in model.entities}}
-    <aside class='open'>
-      <h3>
-        <i class="fa fa-sort-desc"></i> {{entity.name}}
-      </h3>
-      <ul class="table-list">
-        {{#each field in entity.fields}}
-          {{#field-label field=field}}
-            <i class="fa fa-info"></i>
-          {{/field-label}}
-        {{/each}}
-      </ul>
-    </aside>
+    {{view 'builder.entity'}}
   {{/each}}
 
   <a class="newtable" href="#">New entity</a>
@@ -24,7 +13,7 @@
   <div class="row">
     <div class="tableWrapper">
       {{#each entity in model.entities}}
-        {{view 'builder.preview.entity'}}
+        {{view 'builder.preview-entity'}}
       {{/each}}
     </div>
   </div>

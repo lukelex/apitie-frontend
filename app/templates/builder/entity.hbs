@@ -1,0 +1,11 @@
+<h3>
+  <i class="fa fa-sort-desc" {{action 'toggleEntityOpen' target=view bubbles=false}}></i>
+  {{entity.name}}
+</h3>
+<ul class="table-list">
+  {{#each field in entity.fields}}
+    {{#field-label field=field}}
+      <i class="field-inspector fa fa-info" {{action 'openModal' 'builder.inspector' field}}></i>
+    {{/field-label}}
+  {{/each}}
+</ul>
