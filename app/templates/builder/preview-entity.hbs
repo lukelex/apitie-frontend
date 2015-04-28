@@ -3,7 +3,7 @@
 </h2>
 <ul>
   {{#each field in entity.fields}}
-    {{field-label field=field}}
+    {{field-label field=field action='openModal'}}
   {{/each}}
 
   {{#if model.hasLotsOfFields}}

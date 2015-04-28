@@ -6,8 +6,5 @@ export default Ember.View.extend({
   hasLotsOfFields: function() {
     alert(1);
     return this.get('fields').length > 1;
-  }.property('fields'),
-  click: function() {
-    this.get('controller').send('inspectEntity', this.get('name'));
-  }
+  }.property('fields')
 });
