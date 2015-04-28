@@ -3,7 +3,7 @@
   <i class="fa fa-times" {{action 'cancel'}}></i>
   <h2>
     {{model.entity.name}}#
-    {{#if isEditing}}
+    {{#if isEditingName}}
       {{input type='text' value=model.name}}
     {{else}}
       <span>{{model.name}}</span>
@@ -44,29 +44,33 @@
     <ul id="listTwo">
       <li>
         <label>
-          {{input type='checkbox' checked=hasPresence
-            disabled=model.internal}}
+          {{list-checkbox value='presence'
+            checked=model.validates
+            name='validates'}}
           Presence
         </label>
       </li>
       <li>
         <label>
-          {{input type='checkbox' checked=hasUniqueness
-            disabled=model.internal}}
+          {{list-checkbox value='uniqueness'
+            checked=model.validates
+            name='validates'}}
           Uniqueness
         </label>
       </li>
       <li>
         <label>
-          {{input type='checkbox' checked=hasSize
-            disabled=model.internal}}
+          {{list-checkbox value='size'
+            checked=model.validates
+            name='validates'}}
           Size
         </label>
       </li>
       <li>
         <label>
-          {{input type='checkbox' checked=hasFormat
-            disabled=model.internal}}
+          {{list-checkbox value='format'
+            checked=model.validates
+            name='validates'}}
           Format
         </label>
       </li>
