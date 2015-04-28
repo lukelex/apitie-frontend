@@ -3,10 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'li',
   fieldType: function() {
-    if (this.field.get('name') === 'id') {
+    if (this.model.get('name') === 'id') {
       return 'fa-database';
     }
-    switch (this.field.get('type')) {
+    switch (this.model.get('type')) {
       case 'text':
         return 'fa-font';
       case 'number':
@@ -18,8 +18,8 @@ export default Ember.Component.extend({
       default:
         return 'fa-question';
     }
-  }.property('field.type'),
+  }.property('model.type'),
   click: function() {
-    this.sendAction('action', 'builder.inspector', this.field);
+    this.sendAction('action', 'builder.inspector', this.model);
   }
 });

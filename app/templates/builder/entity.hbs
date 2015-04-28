@@ -4,7 +4,7 @@
 </h3>
 <ul class="table-list">
   {{#each field in entity.fields}}
-    {{#field-label field=field action='openModal'}}
+    {{#field-label model=field action='openModal'}}
       <i class="field-inspector fa fa-info"></i>
     {{/field-label}}
   {{/each}}
