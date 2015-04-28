@@ -18,5 +18,5 @@ export default Ember.Component.extend({
       default:
         return 'fa-question';
     }
-  }.property('type')
+  }.property('field.type')
 });
