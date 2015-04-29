@@ -3,5 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   title: DS.attr('string'),
   name: DS.attr('string'),
-  entities: DS.hasMany('entity')
+  public_key: DS.attr('string'),
+  private_key: DS.attr('string'),
+  entities: DS.hasMany('entity', { async: true })
 });
