@@ -9,7 +9,6 @@ export default Ember.View.extend({
     });
   }.property('entity.fields'),
   extraPublicFields: function() {
-    console.log(this.get('publicFields').length)
     return this.get('publicFields').length - 5;
   }.property('publicFields'),
   shouldShowMore: function() {
