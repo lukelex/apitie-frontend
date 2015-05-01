@@ -20,6 +20,6 @@ export default Ember.Component.extend({
     }
   }.property('model.type'),
   click: function() {
-    this.sendAction('action', 'builder.inspector', this.model);
+    this.sendAction('action', 'entities.inspector', this.model);
   }
 });

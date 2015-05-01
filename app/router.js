@@ -10,10 +10,8 @@ export default Router.map(function() {
   this.resource('app', { path: '/apps/:app_id' }, function() {
     this.route('info', { path: '/' });
     this.route('docs');
-    this.route('builder', function() {
-      this.resource('entities', function() {
-        this.route('new');
-      });
+    this.resource('entities', function() {
+      this.route('new');
     });
     this.route('data');
     this.route('settings');

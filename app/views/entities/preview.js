@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  templateName: 'builder/preview-entity',
+  templateName: 'entities/preview',
   classNames: 'table',
   hasLotsOfFields: function() {
     alert(1);

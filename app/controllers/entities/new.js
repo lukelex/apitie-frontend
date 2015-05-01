@@ -10,14 +10,14 @@ export default Ember.Controller.extend({
         app: this.get('app').model
       });
 
-      newEntity.save();
+      newEntity.save()
 
       this.set('name', '');
 
-      this.transitionToRoute('app.builder');
+      this.transitionToRoute('entities');
     },
     cancel: function() {
-      this.transitionToRoute('app.builder');
+      this.transitionToRoute('entities');
     }
   }
 });

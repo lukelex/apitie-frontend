@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  templateName: 'builder/entity',
+  templateName: 'entities/details',
   tagName: 'aside',
   open: false,
   active: false,

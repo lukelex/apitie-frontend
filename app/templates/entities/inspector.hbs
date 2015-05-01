@@ -4,7 +4,7 @@
   <h2>
     {{model.entity.name}}#
     {{#if isEditingName}}
-      {{input type='text' value=model.name}}
+      {{focus-input type='text' value=model.name}}
     {{else}}
       <span>{{model.name}}</span>
       <i class="fa fa-pencil" {{action 'editName'}}></i>
