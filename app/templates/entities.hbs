@@ -3,7 +3,7 @@
     <i class="fa fa-search"></i><input placeholder="Search" type="text" />
   </div>
 
-  {{#each entity in model.entities}}
+  {{#each entity in model}}
     {{view 'entities.details'}}
   {{/each}}
 
@@ -15,8 +15,8 @@
 <section id="contentHolder">
   <div class="row">
     <div class="tableWrapper">
-      {{#each entity in model.entities}}
-        {{view 'entities.preview'}}
+      {{#each entity in model}}
+        {{view 'entities.preview' entity=entity}}
       {{else}}
         {{#link-to 'entities.new'}}
           New Entity

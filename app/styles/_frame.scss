@@ -396,6 +396,10 @@ body {
           margin-bottom:10px;
           cursor:pointer;
 
+          &.field-label:nth-child(n+6) {
+            display: none;
+          }
+
           &:hover {
             color:white;
           }

@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'li',
+  classNames: 'field-label',
   fieldType: function() {
     if (this.model.get('name') === 'id') {
       return 'fa-database';

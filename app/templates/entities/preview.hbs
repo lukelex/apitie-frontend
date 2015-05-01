@@ -3,10 +3,12 @@
 </h2>
 <ul>
   {{#each field in entity.fields}}
-    {{field-label model=field action='openModal'}}
+    {{#unless field.internal}}
+      {{field-label model=field action='openModal'}}
+    {{/unless}}
   {{/each}}
 
-  {{#if model.hasLotsOfFields}}
-    <li class="more"><span>+3 more</span></li>
+  {{#if view.shouldShowMore}}
+    <li class="more"><span>+{{view.extraPublicFields}} more</span></li>
   {{/if}}
 </ul>
