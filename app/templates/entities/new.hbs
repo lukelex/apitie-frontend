@@ -1,0 +1,15 @@
+<div id="iModal" class="minimal">
+  <i class="fa fa-times" {{action 'cancel'}}></i>
+
+  <h2>New Entity</h2>
+
+  <form {{action 'save' on='submit'}}>
+    {{input value=name placeholder='Entity name'}}
+    <button type="submit"></button>
+  </form>
+
+  <div class="actions">
+    <a class="btn save" href="#" {{action 'save'}}>Save</a>
+    <a class="btn cancel" href="#" {{action 'cancel'}}>Cancel</a>
+  </div>
+</div>

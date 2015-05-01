@@ -2,11 +2,14 @@
   <div id="search">
     <i class="fa fa-search"></i><input placeholder="Search" type="text" />
   </div>
+
   {{#each entity in model.entities}}
     {{view 'builder.entity'}}
   {{/each}}
 
-  <a class="newtable" href="#">New entity</a>
+  {{#link-to 'entities.new' class='newtable'}}
+    New Entity
+  {{/link-to}}
 </nav>
 
 <section id="contentHolder">
@@ -14,6 +17,10 @@
     <div class="tableWrapper">
       {{#each entity in model.entities}}
         {{view 'builder.preview-entity'}}
+      {{else}}
+        {{#link-to 'entities.new'}}
+          New Entity
+        {{/link-to}}
       {{/each}}
     </div>
   </div>
