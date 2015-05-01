@@ -220,6 +220,7 @@ body {
   height:calc(100vh - 100px);
   background:$main_color;
   padding-top:10px;
+  padding-bottom:10px;
   float:left;
 
   #search {
@@ -281,13 +282,17 @@ body {
       color:#7b8483;
       padding:10px 20px;
       cursor:pointer;
+      overflow: hidden;
 
       .fa-sort-desc {
-        transform: translate(0, 0px) rotate(-90deg);
+        float: left;
         margin-right:10px;
+        transform: translate(0, 0px) rotate(-90deg);
       }
 
       .entity-name {
+        float: left;
+        width: 125px;
         @extend .truncate;
       }
 
