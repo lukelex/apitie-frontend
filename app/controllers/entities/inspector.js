@@ -1,27 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isEditingName: false,
+  reopen: function() {
+    console.log(this.model.get('isNew'))
+    return this.model.get('isNew');
+  },
   actions: {
-    editName: function() {
-      this.set('isEditingName', true);
-    },
-    close: function() {
-      this.set('isEditingName', false);
-      this.send('closeModal');
-    },
     deleteField: function() {
       this.model.rollback();
-      this.send('close');
+      this.send('closeModal');
 
       this.model.destroyRecord();
     },
     cancel: function() {
       this.model.rollback();
-      this.send('close');
+      this.send('closeModal');
     },
     saveField: function() {
-      this.send('close');
+      this.send('closeModal');
 
       this.get('model').save();
     }
