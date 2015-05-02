@@ -6,19 +6,22 @@ export default Ember.Controller.extend({
     editName: function() {
       this.set('isEditingName', true);
     },
+    close: function() {
+      this.set('isEditingName', false);
+      this.send('closeModal');
+    },
     deleteField: function() {
       this.model.rollback();
-      this.set('isEditing', false);
-      this.send('closeModal');
+      this.send('close');
+
+      this.model.destroyRecord();
     },
     cancel: function() {
       this.model.rollback();
-      this.send('closeModal');
-      this.set('isEditing', false);
+      this.send('close');
     },
     saveField: function() {
-      this.send('closeModal');
-      this.set('isEditing', false);
+      this.send('close');
 
       this.get('model').save();
     }

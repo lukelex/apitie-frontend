@@ -2,8 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    var app = this.modelFor('app');
-    return app.get('entities');
+    return this.modelFor('app').get('entities');
   },
   actions: {
     openModal: function(modalName, model) {

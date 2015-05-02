@@ -76,7 +76,7 @@
       </li>
     </ul>
     <div class="actions">
-      {{#if isInternal}}
+      {{#if model.internal}}
         <a class="btn cancel" href="#" {{action 'cancel'}}>Close</a>
       {{else}}
         <a class="btn delete" href="#" {{action 'deleteField'}}>Delete</a>

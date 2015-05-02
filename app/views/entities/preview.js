@@ -13,5 +13,5 @@ export default Ember.View.extend({
   }.property('publicFields'),
   shouldShowMore: function() {
     return this.get('publicFields').length > 5;
-  }.property()
+  }.property('publicFields')
 });
