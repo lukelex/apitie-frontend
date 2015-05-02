@@ -79,7 +79,9 @@
       {{#if model.internal}}
         <a class="btn cancel" href="#" {{action 'cancel'}}>Close</a>
       {{else}}
-        <a class="btn delete" href="#" {{action 'deleteField'}}>Delete</a>
+        {{#unless model.isNew}}
+          <a class="btn delete" href="#" {{action 'deleteField'}}>Delete</a>
+        {{/unless}}
         <a class="btn save" href="#" {{action 'saveField'}}>Save</a>
         <a class="btn cancel" href="#" {{action 'cancel'}}>Cancel</a>
       {{/if}}
