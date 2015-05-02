@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
         app: this.get('app').model
       });
 
-      newEntity.save()
+      newEntity.save();
 
       this.set('name', '');
 

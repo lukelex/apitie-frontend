@@ -1,3 +1,68 @@
 <section id="appArea">
-  docs
+  <h2 class="general-notes">General Notes</h2>
+
+  <p>This API follows the JSON API spec</p>
+
+  <h2>API Authentication</h2>
+  <p>To access your app's resources you need to create a unique
+  signature for each request, as follows:</p>
+
+  <ul>
+    <li>
+      <code>X-Access-Token</code>: A pre-shared access token.
+    </li>
+    <li>
+      <code>X-Access-Timestamp</code>: The current time UNIX UTC
+    timestamp as an integer. Requests are valid for 1 minute, to
+    prevent replay attacks.
+    </li>
+    <li>
+      <code>X-Request-Hash</code>: A HMAC hexdigest hash of the
+      following elements concatenated:
+      <ul>
+        <li>
+          SHA1 hash
+        </li>
+        <li>
+          Pre-shared secret key (unique for each access token).
+        </li>
+        <li>
+          Request data: HTPP Verb + UNIX UTC timestamp + Query
+        params
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class="task-list">
+    <li>Verb: <code>POST</code></li>
+    <li>Secret: <code>11ba566229f0d670bc4e650168e2f2ad</code></li>
+    <li>Request parameters:
+      <ul class="task-list">
+        <li><code>key0 = value0</code></li>
+        <li><code>key1 = value1</code></li>
+      </ul>
+    </li>
+    <li>Timestamp: <code>1384178851</code></li>
+  </ul>
+
+  <p>Final hash function input: <code>POST11ba566229f0d670bc4e650168e2f2adkey0=value0&amp;key1=value11384178851</code></p>
+
+  <p>The example input would result in the following request hash: <code>66f3845e935f15366f098e2ca912566799316a2d</code></p>
+
+  <p>So the final request would look something like this:</p>
+
+  <pre>
+    <code>POST /users?key0=value0&amp;key1=value1 HTTP/1.1
+    ...
+    X-Access-Token: 31cb1c0f1c885b7421731f0cc225aabd
+    X-Request-Timestamp: 1384178851
+    X-Request-Hash: muaAxT1J6pqwMmMaDfQFPZrVFLZqR8AiuXfxb88D+V4=
+  </code></pre>
+
+  <p>If a request fails to validate, the server will respond with <code>401 Unauthorized</code>.</p>
+
+  {{#each entity in model.entities}}
+    {{view 'app.docs.entity' entity}}
+  {{/each}}
 </section>

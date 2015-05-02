@@ -1,0 +1,56 @@
+<h2>{{entity.name}}</h2>
+
+<!--index-->
+<h4>Output example:</h4>
+{{#each field in entity.fields}}
+  <code>{{json-sample field}}</code>
+{{/each}}
+
+<!--create-->
+<h3>POST /{{entity.name}}</h3>
+<p>Creates a new {{entity.name}} with the given information.</p>
+
+<h4>Input example:</h4>
+{{#each field in entity.fields}}
+  {{#unless field.internal}}
+    <code>{{json-sample field}}</code>
+  {{/unless}}
+{{/each}}
+
+<h4>Output example:</h4>
+{{#each field in entity.fields}}
+  <code>{{json-sample field}}</code>
+{{/each}}
+
+<!--show-->
+<h3>GET /{{entity.name}}/:id</h3>
+<p>Shows the information for a single {{entity.name}}.</p>
+<h4>Output example:</h4>
+{{#each field in entity.fields}}
+  <code>{{json-sample field}}</code>
+{{/each}}
+
+<!--update-->
+<h3>PUT /{{entity.name}}/:id</h3>
+<p>Updates the specified {{entity.name}} with the given information.</p>
+
+<h4>Input example:</h4>
+{{#each field in entity.fields}}
+  {{#unless field.internal}}
+    <code>{{json-sample field}}</code>
+  {{/unless}}
+{{/each}}
+
+<h4>Output example:</h4>
+{{#each field in entity.fields}}
+  <code>{{json-sample field}}</code>
+{{/each}}
+
+<!--delete-->
+<h3>DELETE /{{entity.name}}/:id</h3>
+<p>Removes the specified {{entity.name}}.</p>
+
+<h4>Output example:</h4>
+{{#each field in entity.fields}}
+  <code>{{json-sample field}}</code>
+{{/each}}
