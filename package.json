@@ -36,6 +36,6 @@
     "ember-export-application-global": "^1.0.2"
   },
   "dependencies": {
-    "ember-radio-buttons": "^3.0.1"
+    "ember-radio-button": "1.0.5"
   }
 }

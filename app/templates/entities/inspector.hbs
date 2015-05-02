@@ -12,29 +12,29 @@
   <div class="options">
     <ul id="listOne">
       <li>
-        {{radio-button value='text' checked=model.type
-          id='type-text' name='type'}}
+        {{radio-button value='text' groupValue=model.type
+          id='type-text' name='type' disabled=model.internal}}
         <label for="type-text">
           <i class="fa fa-font"></i> Text
         </label>
       </li>
       <li>
-        {{radio-button value='number' checked=model.type
-          id='type-number' name='type'}}
+        {{radio-button value='number' groupValue=model.type
+          id='type-number' name='type' disabled=model.internal}}
         <label for="type-number">
           <i class="fa fa-calculator"></i> Number
         </label>
       </li>
       <li>
-        {{radio-button value='datetime' checked=model.type
-          id='type-datetime' name='type'}}
+        {{radio-button value='datetime' groupValue=model.type
+          id='type-datetime' name='type' disabled=model.internal}}
         <label for="type-datetime">
           <i class="fa fa-calendar"></i> Date Time
         </label>
       </li>
       <li>
-        {{radio-button value='file' checked=model.type
-          id='type-file' name='type'}}
+        {{radio-button value='file' groupValue=model.type
+          id='type-file' name='type' disabled=model.internal}}
         <label for="type-file">
           <i class="fa fa-file"></i> File
         </label>
@@ -45,7 +45,7 @@
         <label>
           {{list-checkbox value='presence'
             checked=model.validates
-            name='validates'}}
+            name='validates' disabled=model.internal}}
           Presence
         </label>
       </li>
@@ -53,7 +53,7 @@
         <label>
           {{list-checkbox value='uniqueness'
             checked=model.validates
-            name='validates'}}
+            name='validates' disabled=model.internal}}
           Uniqueness
         </label>
       </li>
@@ -61,7 +61,7 @@
         <label>
           {{list-checkbox value='size'
             checked=model.validates
-            name='validates'}}
+            name='validates' disabled=model.internal}}
           Size
         </label>
       </li>
@@ -69,7 +69,7 @@
         <label>
           {{list-checkbox value='format'
             checked=model.validates
-            name='validates'}}
+            name='validates' disabled=model.internal}}
           Format
         </label>
       </li>

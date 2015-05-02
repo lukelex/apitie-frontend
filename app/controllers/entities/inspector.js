@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  reopen: function() {
-    console.log(this.model.get('isNew'))
-    return this.model.get('isNew');
-  },
   actions: {
     deleteField: function() {
       this.model.rollback();
