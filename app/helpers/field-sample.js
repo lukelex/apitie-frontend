@@ -16,7 +16,7 @@ export default function fieldSample(field) {
     var to = new Date(2100, 0, 1).getTime();
     sample = new Date(from + Math.random() * (to - from));
   } else if (fieldName.match(/_?url$/)) {
-    sample = 'http://example.com/resource_url'
+    sample = 'http://example.com/resource_url';
   } else if (fieldType === 'text') {
     sample = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...';
   } else {
