@@ -16,12 +16,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    'simple-auth': {
+      authorizer: 'simple-auth-authorizer:token',
+      crossOriginWhitelist: ['*'],
+      routeAfterAuthentication: 'dashboard'
     }
   };
 
   if (environment === 'development') {
     ENV.contentSecurityPolicy = {
-      'default-src': "'none'",
+      'default-src': "'none' *",
       'script-src': "'self' *",
       'font-src': "'self' *",
       'style-src': "'self' *",
@@ -29,6 +35,12 @@ module.exports = function(environment) {
       'img-src': "'self' *",
       'media-src': "'self'"
     }
+
+    ENV['simple-auth-token'] = {
+      serverTokenEndpoint: 'http://dev.rest-in.me:9292/login',
+      identificationField: 'email'
+    }
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     ENV.APP.LOG_TRANSITIONS = true;
@@ -49,7 +61,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV['simple-auth-token'] = {
+      serverTokenEndpoint: 'http://rest-in.me/login',
+      identificationField: 'email'
+    }
   }
 
   return ENV;

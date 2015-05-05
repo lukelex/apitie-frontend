@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.route('login');
+
   this.route('dashboard', { path: '/' });
   this.resource('app', { path: '/apps/:app_id' }, function() {
     this.route('info', { path: '/' });
