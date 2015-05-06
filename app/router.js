@@ -9,6 +9,7 @@ export default Router.map(function() {
   this.route('login');
 
   this.route('dashboard', { path: '/' });
+  this.route('new_app', { path: '/apps/new' });
   this.resource('app', { path: '/apps/:app_id' }, function() {
     this.route('info', { path: '/' });
     this.route('docs');
@@ -18,4 +19,5 @@ export default Router.map(function() {
     this.route('data');
     this.route('settings');
   });
+  this.route('new-app');
 });

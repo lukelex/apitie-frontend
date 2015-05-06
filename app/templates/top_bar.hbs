@@ -2,7 +2,6 @@
   <h1>
     {{link-to 'RestInMe' 'dashboard'}}
   </h1>
-  {{session.isAuthenticated}}
   {{#if session.isAuthenticated}}
     <div id="usericon">
       <i class="fa fa-user" {{action 'invalidateSession'}}></i>
