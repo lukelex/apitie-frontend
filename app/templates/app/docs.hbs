@@ -1,64 +1,155 @@
 <section id="appArea">
-  <h2 class="general-notes">General Notes</h2>
+  <div id="faq-btn-area">
+    <a class="btn active" href="#">Overview</a><a class="btn" href="#">Get started</a><a class="btn" href="#">Documentation</a><a class="btn" href="#">Something</a><a class="btn" href="#">Fancy</a>
+  </div>
+  <div id="faq">
+    <h1>
+      Hello World
+    </h1>
+    <hr>
+    <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+    <hr>
+    <h2>
+      Description
+    </h2>
+    <p>
+    A list of terms with their associated descriptions
+    </p>
+    <dl>
+      <dt>
+      Description lists
+      </dt>
+      <dd>
+      A description list is perfect for defining terms.
+      </dd>
+      <dt>
+      Euismod
+      </dt>
+      <dd>
+      Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.
+      </dd>
+    </dl>
+    <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+    <hr>
+    <div class="alert alert-success">
+      Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+    </div>
+    <h3>
+      Lorem ipsum dolor sit amet
+    </h3>
+    <p>Consectetur adipiscing elit. <code>&lt;section&gt;</code> ullamcorper commodo massa in vestibulum. Donec condimentum lectus id eros semper consequat. Pellentesque at orci et enim mollis consectetur at vitae dui. Vestibulum sodales arcu eget risus vestibulum, at accumsan eros sollicitudin.
+    </p>
+    <p>Nunc facilisis, urna eu commodo imperdiet, erat leo facilisis est, <code>api.puts?yourdata=here</code> velit felis et erat.
+    </p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            #
+          </th>
+          <th>
+            First Name
+          </th>
+          <th>
+            Last Name
+          </th>
+          <th>
+            Username
+          </th>
+        </tr>
+      </thead><tbody>
+      <tr>
+        <th scope="row">
+          1
+        </th>
+        <td>
+          Mark
+        </td>
+        <td>
+          Otto
+        </td>
+        <td>
+          @mdo
+        </td>
+      </tr>
+      <tr class="success">
+        <th scope="row">
+          2
+        </th>
+        <td>
+          Jacob
+        </td>
+        <td>
+          Thornton
+        </td>
+        <td>
+          @fat
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          3
+        </th>
+        <td>
+          Larry
+        </td>
+        <td>
+          the Bird
+        </td>
+        <td>
+          @twitter
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          2
+        </th>
+        <td>
+          Jacob
+        </td>
+        <td>
+          Thornton
+        </td>
+        <td>
+          @fat
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          3
+        </th>
+        <td>
+          Larry
+        </td>
+        <td>
+          the Bird
+        </td>
+        <td>
+          @twitter
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          2
+        </th>
+        <td>
+          Jacob
+        </td>
+        <td>
+          Thornton
+        </td>
+        <td>
+          @fat
+        </td>
+      </tr>
+      </tbody>
 
-  <p>This API follows the JSON API spec</p>
-
-  <h2>API Authentication</h2>
-  <p>To access your app's resources you need to create a unique
-  signature for each request, as follows:</p>
-
-  <ul>
-    <li>
-      <code>X-Access-Token</code>: A pre-shared access token.
-    </li>
-    <li>
-      <code>X-Access-Timestamp</code>: The current time UNIX UTC
-    timestamp as an integer. Requests are valid for 1 minute, to
-    prevent replay attacks.
-    </li>
-    <li>
-      <code>X-Request-Hash</code>: A HMAC hexdigest hash of the
-      following elements concatenated:
-      <ul>
-        <li>
-          SHA1 hash
-        </li>
-        <li>
-          Pre-shared secret key (unique for each access token).
-        </li>
-        <li>
-          Request data: HTPP Verb + UNIX UTC timestamp + Query
-        params
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul class="task-list">
-    <li>Verb: <code>POST</code></li>
-    <li>Secret: <code>11ba566229f0d670bc4e650168e2f2ad</code></li>
-    <li>Request parameters:
-      <ul class="task-list">
-        <li><code>key0 = value0</code></li>
-        <li><code>key1 = value1</code></li>
-      </ul>
-    </li>
-    <li>Timestamp: <code>1384178851</code></li>
-  </ul>
-
-  <p>Final hash function input: <code>POST11ba566229f0d670bc4e650168e2f2adkey0=value0&amp;key1=value11384178851</code></p>
-
-  <p>The example input would result in the following request hash: <code>66f3845e935f15366f098e2ca912566799316a2d</code></p>
-
-  <p>So the final request would look something like this:</p>
-
-  <pre>
-    <code>POST /users?key0=value0&amp;key1=value1 HTTP/1.1
-    ...
-    X-Access-Token: 31cb1c0f1c885b7421731f0cc225aabd
-    X-Request-Timestamp: 1384178851
-    X-Request-Hash: muaAxT1J6pqwMmMaDfQFPZrVFLZqR8AiuXfxb88D+V4=
-  </code></pre>
+    </table>
+    <p>
+    Vivamus sollicitudin maximus libero, in blandit nisl congue nec. Pellentesque venenatis magna blandit ex sodales facilisis. Suspendisse non ipsum volutpat, laoreet mauris sit amet, auctor nisi. Sed facilisis ligula elit, sed sollicitudin nisi vestibulum ut. Sed leo tellus, lacinia vitae consectetur quis, aliquet a nisl. Donec ac tellus ex. Phasellus et tellus dolor. Nulla facilisi. Nulla lacinia varius dui eu vestibulum.
+    </p>
+    <script src="js/bootstrap.min.js"></script>
+  </div>
 
   <p>If a request fails to validate, the server will respond with <code>401 Unauthorized</code>.</p>
 

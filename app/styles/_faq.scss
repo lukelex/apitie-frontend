@@ -1,0 +1,32 @@
+#faq {
+  background:white;
+  padding:10px 20px;
+  border-radius:4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#faq-btn-area {
+  width:100%;
+  text-align:center;
+  margin-bottom:20px;
+
+  .btn {
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:4px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    margin:10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition:box-shadow 0.4s;
+
+    &:hover {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    &.active {
+      text-decoration:underline;
+    }
+  }
+}
