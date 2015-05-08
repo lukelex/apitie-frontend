@@ -1,5 +1,6 @@
 import DS from 'ember-data';
+import ENV from 'restinme/config/environment';
 
 export default DS.RESTAdapter.reopen({
-  host: 'http://dev.rest-in.me:9292'
+  host: ENV.apiEndpoint
 });
