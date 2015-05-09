@@ -1,159 +1,26 @@
 <section id="appArea">
-  <div id="faq-btn-area">
-    <a class="btn active" href="#">Overview</a><a class="btn" href="#">Get started</a><a class="btn" href="#">Documentation</a><a class="btn" href="#">Something</a><a class="btn" href="#">Fancy</a>
-  </div>
   <div id="faq">
-    <h1>
-      Hello World
-    </h1>
-    <hr>
-    <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
-    <hr>
-    <h2>
-      Description
+    <h2 style="margin-top:0;">
+      {{model.name}} documentation
     </h2>
-    <p>
-    A list of terms with their associated descriptions
-    </p>
-    <dl>
-      <dt>
-      Description lists
-      </dt>
-      <dd>
-      A description list is perfect for defining terms.
-      </dd>
-      <dt>
-      Euismod
-      </dt>
-      <dd>
-      Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.
-      </dd>
-    </dl>
-    <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
-    <hr>
-    <div class="alert alert-success">
-      Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-    </div>
-    <h3>
-      Lorem ipsum dolor sit amet
-    </h3>
-    <p>Consectetur adipiscing elit. <code>&lt;section&gt;</code> ullamcorper commodo massa in vestibulum. Donec condimentum lectus id eros semper consequat. Pellentesque at orci et enim mollis consectetur at vitae dui. Vestibulum sodales arcu eget risus vestibulum, at accumsan eros sollicitudin.
-    </p>
-    <p>Nunc facilisis, urna eu commodo imperdiet, erat leo facilisis est, <code>api.puts?yourdata=here</code> velit felis et erat.
-    </p>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>
-            #
-          </th>
-          <th>
-            First Name
-          </th>
-          <th>
-            Last Name
-          </th>
-          <th>
-            Username
-          </th>
-        </tr>
-      </thead><tbody>
-      <tr>
-        <th scope="row">
-          1
-        </th>
-        <td>
-          Mark
-        </td>
-        <td>
-          Otto
-        </td>
-        <td>
-          @mdo
-        </td>
-      </tr>
-      <tr class="success">
-        <th scope="row">
-          2
-        </th>
-        <td>
-          Jacob
-        </td>
-        <td>
-          Thornton
-        </td>
-        <td>
-          @fat
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          3
-        </th>
-        <td>
-          Larry
-        </td>
-        <td>
-          the Bird
-        </td>
-        <td>
-          @twitter
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          2
-        </th>
-        <td>
-          Jacob
-        </td>
-        <td>
-          Thornton
-        </td>
-        <td>
-          @fat
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          3
-        </th>
-        <td>
-          Larry
-        </td>
-        <td>
-          the Bird
-        </td>
-        <td>
-          @twitter
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          2
-        </th>
-        <td>
-          Jacob
-        </td>
-        <td>
-          Thornton
-        </td>
-        <td>
-          @fat
-        </td>
-      </tr>
-      </tbody>
 
-    </table>
-    <p>
-    Vivamus sollicitudin maximus libero, in blandit nisl congue nec. Pellentesque venenatis magna blandit ex sodales facilisis. Suspendisse non ipsum volutpat, laoreet mauris sit amet, auctor nisi. Sed facilisis ligula elit, sed sollicitudin nisi vestibulum ut. Sed leo tellus, lacinia vitae consectetur quis, aliquet a nisl. Donec ac tellus ex. Phasellus et tellus dolor. Nulla facilisi. Nulla lacinia varius dui eu vestibulum.
-    </p>
-    <script src="js/bootstrap.min.js"></script>
+    <p>Here you'll find all the documentation and instructions
+    necessary for you start using this API.</p>
+
+    <p>We recommend using one of our adapters to simplify the
+    process of signning each request. You can find all
+    available adapters below:</p>
   </div>
 
-  <p>If a request fails to validate, the server will respond with <code>401 Unauthorized</code>.</p>
+  <div id="faq-btn-area">
+    {{link-to 'Manually' 'app.docs.index' class='btn'}}
+    {{link-to 'Android' 'app.docs.android' class='btn'}}
+    {{link-to 'iOS' 'app.docs.ios' class='btn'}}
+    {{link-to 'JS' 'app.docs.js' class='btn'}}
+    {{link-to 'Ruby' 'app.docs.ruby' class='btn'}}
+  </div>
 
-  {{#each entity in model.entities}}
-    {{view 'app.docs.entity' entity}}
-  {{/each}}
+  <div id="faq">
+    {{outlet}}
+  </div>
 </section>

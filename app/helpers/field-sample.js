@@ -1,5 +1,5 @@
-export default function fieldSample(field) {
-  var node = {}, sample;
+export default function fieldSample(obj, field) {
+  var sample;
   var fieldName = field.get('name');
   var fieldType = field.get('type');
 
@@ -23,7 +23,5 @@ export default function fieldSample(field) {
     sample = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...';
   }
 
-  node[field.get('name')] = sample;
-
-  return node;
+  obj[field.get('name')] = sample;
 }

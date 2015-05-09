@@ -1,56 +1,39 @@
-<h2>{{entity.name}}</h2>
+<h2>{{model.name}}</h2>
 
 <!--index-->
+<h3>GET /{{model.name}}</h3>
 <h4>Output example:</h4>
-{{#each field in entity.fields}}
-  <code>{{json-sample field}}</code>
-{{/each}}
+<code>{{json-sample model.fields}}</code>
 
 <!--create-->
-<h3>POST /{{entity.name}}</h3>
-<p>Creates a new {{entity.name}} with the given information.</p>
+<h3>POST /{{model.name}}</h3>
+<p>Creates a new {{model.name}} with the given information.</p>
 
 <h4>Input example:</h4>
-{{#each field in entity.fields}}
-  {{#unless field.internal}}
-    <code>{{json-sample field}}</code>
-  {{/unless}}
-{{/each}}
+<code>{{json-sample publicFields}}</code>
 
 <h4>Output example:</h4>
-{{#each field in entity.fields}}
-  <code>{{json-sample field}}</code>
-{{/each}}
+<code>{{json-sample model.fields}}</code>
 
 <!--show-->
-<h3>GET /{{entity.name}}/:id</h3>
-<p>Shows the information for a single {{entity.name}}.</p>
+<h3>GET /{{model.name}}/:id</h3>
+<p>Shows the information for a single {{model.name}}.</p>
 <h4>Output example:</h4>
-{{#each field in entity.fields}}
-  <code>{{json-sample field}}</code>
-{{/each}}
+<code>{{json-sample model.fields}}</code>
 
 <!--update-->
-<h3>PUT /{{entity.name}}/:id</h3>
-<p>Updates the specified {{entity.name}} with the given information.</p>
+<h3>PUT /{{model.name}}/:id</h3>
+<p>Updates the specified {{model.name}} with the given information.</p>
 
 <h4>Input example:</h4>
-{{#each field in entity.fields}}
-  {{#unless field.internal}}
-    <code>{{json-sample field}}</code>
-  {{/unless}}
-{{/each}}
+<code>{{json-sample publicFields}}</code>
 
 <h4>Output example:</h4>
-{{#each field in entity.fields}}
-  <code>{{json-sample field}}</code>
-{{/each}}
+<code>{{json-sample model.fields}}</code>
 
 <!--delete-->
-<h3>DELETE /{{entity.name}}/:id</h3>
-<p>Removes the specified {{entity.name}}.</p>
+<h3>DELETE /{{model.name}}/:id</h3>
+<p>Removes the specified {{model.name}}.</p>
 
 <h4>Output example:</h4>
-{{#each field in entity.fields}}
-  <code>{{json-sample field}}</code>
-{{/each}}
+<code>{{json-sample model.fields}}</code>

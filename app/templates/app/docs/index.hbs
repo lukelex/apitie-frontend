@@ -1,0 +1,167 @@
+<p>If we don't yet provide an adapter for the language you desire,
+please give us a shout. In the meantime you can follow the
+instructions below to manually sign your requests.</p>
+
+<h2>
+  How does it work?
+</h2>
+
+<p>Before making the API call, combine the HTTP method
+(GET, POST, etc), the utc timestamp of the request, with the
+string representation of your parameters. Hash (HMAC-SHA1) the
+blob of data (from Step #1) with your private key assigned to you
+by the system. Send the server the following data in the header
+of your request:</p>
+
+<ul>
+  <li>* Your app Public Key assigned to you by the system. This
+  is a public value that anyone (even evil masterminds can know
+  and you don’t mind). It is just a way for the system to know
+  WHO is sending the request, not if it should trust the sender
+  or not (we figure that out based on the HMAC);</li>
+  <li>* Send the utc timestamp, in seconds, of the request;</li>
+  <li>* Send the HMAC (hash) you generated;</li>
+  <li>* Send all the data (parameters and values) you were
+  planning on sending anyway, like
+  <code>mode=start&number=4&order=desc</code>.</li>
+</ul>
+
+{{#each entity in model.entities}}
+  {{render 'app.docs.entity' entity}}
+{{/each}}
+
+<dl>
+  <dt>
+  Description lists
+  </dt>
+  <dd>
+  A description list is perfect for defining terms.
+  </dd>
+  <dt>
+  Euismod
+  </dt>
+  <dd>
+  Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.
+  </dd>
+</dl>
+
+<hr>
+<div class="alert alert-success">
+  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+</div>
+<h3>
+  Lorem ipsum dolor sit amet
+</h3>
+<p>Consectetur adipiscing elit. <code>&lt;section&gt;</code> ullamcorper commodo massa in vestibulum. Donec condimentum lectus id eros semper consequat. Pellentesque at orci et enim mollis consectetur at vitae dui. Vestibulum sodales arcu eget risus vestibulum, at accumsan eros sollicitudin.
+</p>
+<p>Nunc facilisis, urna eu commodo imperdiet, erat leo facilisis est, <code>api.puts?yourdata=here</code> velit felis et erat.
+</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        #
+      </th>
+      <th>
+        First Name
+      </th>
+      <th>
+        Last Name
+      </th>
+      <th>
+        Username
+      </th>
+    </tr>
+  </thead><tbody>
+  <tr>
+    <th scope="row">
+      1
+    </th>
+    <td>
+      Mark
+    </td>
+    <td>
+      Otto
+    </td>
+    <td>
+      @mdo
+    </td>
+  </tr>
+  <tr class="success">
+    <th scope="row">
+      2
+    </th>
+    <td>
+      Jacob
+    </td>
+    <td>
+      Thornton
+    </td>
+    <td>
+      @fat
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      3
+    </th>
+    <td>
+      Larry
+    </td>
+    <td>
+      the Bird
+    </td>
+    <td>
+      @twitter
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      2
+    </th>
+    <td>
+      Jacob
+    </td>
+    <td>
+      Thornton
+    </td>
+    <td>
+      @fat
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      3
+    </th>
+    <td>
+      Larry
+    </td>
+    <td>
+      the Bird
+    </td>
+    <td>
+      @twitter
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      2
+    </th>
+    <td>
+      Jacob
+    </td>
+    <td>
+      Thornton
+    </td>
+    <td>
+      @fat
+    </td>
+  </tr>
+  </tbody>
+
+</table>
+<p>
+Vivamus sollicitudin maximus libero, in blandit nisl congue nec. Pellentesque venenatis magna blandit ex sodales facilisis. Suspendisse non ipsum volutpat, laoreet mauris sit amet, auctor nisi. Sed facilisis ligula elit, sed sollicitudin nisi vestibulum ut. Sed leo tellus, lacinia vitae consectetur quis, aliquet a nisl. Donec ac tellus ex. Phasellus et tellus dolor. Nulla facilisi. Nulla lacinia varius dui eu vestibulum.
+</p>
+
+<p>If a request fails to validate, the server will respond with <code>401 Unauthorized</code>.</p>

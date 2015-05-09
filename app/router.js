@@ -12,7 +12,12 @@ export default Router.map(function() {
   this.route('new_app', { path: '/apps/new' });
   this.resource('app', { path: '/apps/:app_id' }, function() {
     this.route('info', { path: '/' });
-    this.route('docs');
+    this.route('docs', function() {
+      this.route('ruby');
+      this.route('ios');
+      this.route('js');
+      this.route('android');
+    });
     this.resource('entities', function() {
       this.route('new');
     });
