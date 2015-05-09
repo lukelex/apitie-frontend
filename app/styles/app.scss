@@ -1,12 +1,11 @@
-@import "compass/reset";
+@import 'compass/reset';
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
-@import "vars";
-@import "frame";
-@import "modal";
-@import "json_snippets";
-@import "faq";
-@import "faq_vendor";
-@import "login";
+@import 'frame';
+@import 'login';
+@import 'modal';
+@import 'json_snippets';
+@import 'faq';
+@import 'faq_vendor';
 
 * {
   box-sizing:border-box;
