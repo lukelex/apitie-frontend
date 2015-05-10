@@ -11,7 +11,6 @@ export default Router.map(function() {
   this.route('dashboard', { path: '/' });
   this.route('new_app', { path: '/apps/new' });
   this.resource('app', { path: '/apps/:app_id' }, function() {
-    this.route('info', { path: '/' });
     this.route('docs', function() {
       this.route('ruby');
       this.route('ios');
