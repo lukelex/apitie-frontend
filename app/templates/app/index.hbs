@@ -1,5 +1,7 @@
 <section id="appArea">
-  {{model.name}}
-  <p>Public key: {{model.public_key}}</p>
-  <p>Private key: {{model.private_key}}</p>
+  {{model.app.name}}
+  <p>Public key: {{model.app.public_key}}</p>
+  <p>Private key: {{model.app.private_key}}</p>
+
+  {{render 'app/statistics' model.statistic}}
 </section>
