@@ -23,13 +23,14 @@ of your request:</p>
   <li>* Send the HMAC (hash) you generated;</li>
   <li>* Send all the data (parameters and values) you were
   planning on sending anyway, like
-  <code>mode=start&number=4&order=desc</code>.</li>
+  mode=start&number=4&order=desc.</li>
 </ul>
 
 {{#each entity in model.entities}}
   {{render 'app.docs.entity' entity}}
 {{/each}}
 
+<!--
 <dl>
   <dt>
   Description lists
@@ -165,3 +166,4 @@ Vivamus sollicitudin maximus libero, in blandit nisl congue nec. Pellentesque ve
 </p>
 
 <p>If a request fails to validate, the server will respond with <code>401 Unauthorized</code>.</p>
+--!>
