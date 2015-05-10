@@ -8,21 +8,51 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   left:calc(50% - 150px);
   top:calc(50% - 150px);
-  padding-bottom:5px;
+  padding:20px;
+
+  h3 {
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+  }
 
   form {
     margin-top:10px;
-    margin-bottom:10px;
     text-align:left;
     .center {
       text-align:center;
     }
+
+    .form-group {
+      margin-bottom:20px;
+
+      label {
+        display:block;
+        margin-bottom:10px;
+      }
+
+      input {
+        width:100%;
+        padding:0px 10px;
+        line-height:30px;
+        font-size:16px;
+      }
+    }
     button {
       margin-top:15px;
-      transition:box-shadow 0.4s;
+      transition:all 0.4s;
+      border:none;
+      padding:10px 30px;
+      background:white;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0), 0 2px 10px 0 rgba(0, 0, 0, 0);
+      cursor:pointer;
+      border-radius:15px;
+      background:$main_color;
+      color:white;
 
       &:hover {
         background:white!important;
+        color:$main_color;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
       }
     }
