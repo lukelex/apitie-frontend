@@ -29,7 +29,7 @@ module.exports = function(environment) {
     ENV.apiEndpoint = 'http://dev.rest-in.me:9292/api';
 
     ENV['simple-auth-token'] = {
-      serverTokenEndpoint: 'http://dev.rest-in.me:9292/login',
+      serverTokenEndpoint: 'http://dev.rest-in.me:9292/api/login',
       identificationField: 'email'
     }
 
@@ -56,7 +56,7 @@ module.exports = function(environment) {
     ENV.apiEndpoint = 'http://lynx.restinme.c66.me/api';
 
     ENV['simple-auth-token'] = {
-      serverTokenEndpoint: 'http://lynx.restinme.c66.me/login',
+      serverTokenEndpoint: 'http://lynx.restinme.c66.me/api/login',
       identificationField: 'email'
     }
   }
