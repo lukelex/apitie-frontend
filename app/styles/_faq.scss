@@ -1,8 +1,49 @@
-#faq {
+.faq {
   background:white;
   padding:20px 20px;
   border-radius:4px;
   font-family: 'Roboto', sans-serif;
+  line-height:1.5;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom:10px;
+    font-weight:500;
+  }
+
+  h1 {
+    font-size:36px;
+  }
+
+  h2 {
+    font-size:30px;
+  }
+
+  h3 {
+    font-size:24px;
+  }
+
+  h4 {
+    font-size:18px;
+  }
+
+  h5 {
+    font-size:14px;
+  }
+
+  h6 {
+    font-size:12px;
+  }
+
+  code {
+    padding:9px 14px;
+    display:inline-block;
+    margin:5px 0px 14px 0px;
+    background-color:#f7f7f9;
+    border:1px solid #e1e1e8;
+    border-radius:4px;
+  }
+
+
 }
 
 #faq-btn-area {
