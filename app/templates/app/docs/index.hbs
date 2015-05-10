@@ -20,148 +20,32 @@ of your request:</p>
   WHO is sending the request, not if it should trust the sender
   or not (we figure that out based on the HMAC);</li>
   <li>* Send the utc timestamp, in seconds, of the request;</li>
-  <li>* Send the HMAC (hash) you generated;</li>
+  <li>* Send the HASH (HMAC) you generated;</li>
   <li>* Send all the data (parameters and values) you were
   planning on sending anyway, like
   <code>mode=start&number=4&order=desc</code>.</li>
 </ul>
 
+<p>A request to create an entry in the books entity for a given
+app would provide:</p>
+
+<pre>
+POST /api/books
+
+Headers:
+{
+  "X-Request-Timestamp" => "1431193906",
+  "X-Access-Token" => "dbd45b1f22532beb8c9a55531a94b67a6d2960ef1c586f384de1c997657ae348",
+  "X-Request-Hash" => "ce75fcb8d688e235761027bef2055098b061c664"
+}
+
+Parameters:
+{
+  "name" => "The Lord Of The Rings: The Return of the King",
+  "pages" => 490
+}
+</pre>
+
 {{#each entity in model.entities}}
   {{render 'app.docs.entity' entity}}
 {{/each}}
-
-<dl>
-  <dt>
-  Description lists
-  </dt>
-  <dd>
-  A description list is perfect for defining terms.
-  </dd>
-  <dt>
-  Euismod
-  </dt>
-  <dd>
-  Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.
-  </dd>
-</dl>
-
-<hr>
-<div class="alert alert-success">
-  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-</div>
-<h3>
-  Lorem ipsum dolor sit amet
-</h3>
-<p>Consectetur adipiscing elit. <code>&lt;section&gt;</code> ullamcorper commodo massa in vestibulum. Donec condimentum lectus id eros semper consequat. Pellentesque at orci et enim mollis consectetur at vitae dui. Vestibulum sodales arcu eget risus vestibulum, at accumsan eros sollicitudin.
-</p>
-<p>Nunc facilisis, urna eu commodo imperdiet, erat leo facilisis est, <code>api.puts?yourdata=here</code> velit felis et erat.
-</p>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>
-        #
-      </th>
-      <th>
-        First Name
-      </th>
-      <th>
-        Last Name
-      </th>
-      <th>
-        Username
-      </th>
-    </tr>
-  </thead><tbody>
-  <tr>
-    <th scope="row">
-      1
-    </th>
-    <td>
-      Mark
-    </td>
-    <td>
-      Otto
-    </td>
-    <td>
-      @mdo
-    </td>
-  </tr>
-  <tr class="success">
-    <th scope="row">
-      2
-    </th>
-    <td>
-      Jacob
-    </td>
-    <td>
-      Thornton
-    </td>
-    <td>
-      @fat
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">
-      3
-    </th>
-    <td>
-      Larry
-    </td>
-    <td>
-      the Bird
-    </td>
-    <td>
-      @twitter
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">
-      2
-    </th>
-    <td>
-      Jacob
-    </td>
-    <td>
-      Thornton
-    </td>
-    <td>
-      @fat
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">
-      3
-    </th>
-    <td>
-      Larry
-    </td>
-    <td>
-      the Bird
-    </td>
-    <td>
-      @twitter
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">
-      2
-    </th>
-    <td>
-      Jacob
-    </td>
-    <td>
-      Thornton
-    </td>
-    <td>
-      @fat
-    </td>
-  </tr>
-  </tbody>
-
-</table>
-<p>
-Vivamus sollicitudin maximus libero, in blandit nisl congue nec. Pellentesque venenatis magna blandit ex sodales facilisis. Suspendisse non ipsum volutpat, laoreet mauris sit amet, auctor nisi. Sed facilisis ligula elit, sed sollicitudin nisi vestibulum ut. Sed leo tellus, lacinia vitae consectetur quis, aliquet a nisl. Donec ac tellus ex. Phasellus et tellus dolor. Nulla facilisi. Nulla lacinia varius dui eu vestibulum.
-</p>
-
-<p>If a request fails to validate, the server will respond with <code>401 Unauthorized</code>.</p>
