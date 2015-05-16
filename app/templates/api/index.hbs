@@ -1,0 +1,9 @@
+<section id="appArea">
+  <div id="info">
+    <h3>{{model.api.name}}</h3>
+    <p>Public key: {{model.api.public_key}}</p>
+    <p>Private key: {{model.api.private_key}}</p>
+
+    {{render 'api/statistics' model.statistic}}
+  </div>
+</section>

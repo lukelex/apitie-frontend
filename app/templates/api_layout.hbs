@@ -3,12 +3,12 @@
     {{model.name}}
   </div>
   <ul id="appTabs">
-    <li>{{link-to 'Info' 'app.index' model}}</li>
+    <li>{{link-to 'Info' 'api.index' model}}</li>
     <li>{{link-to 'Entities' 'entities' model}}</li>
-    <!--<li>{{link-to 'Data Browser' 'app.data' model}}</li>-->
-    <li>{{link-to 'Docs' 'app.docs' model}}</li>
+    <!--<li>{{link-to 'Data Browser' 'api.data' model}}</li>-->
+    <li>{{link-to 'Docs' 'api.docs' model}}</li>
   </ul>
-  {{#link-to 'app.settings' model id='builderSettings'}}
+  {{#link-to 'api.settings' model id='builderSettings'}}
     <i class="fa fa-cog"></i>
   {{/link-to}}
 </div>

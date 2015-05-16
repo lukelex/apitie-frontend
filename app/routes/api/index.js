@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    var app = this.modelFor('app');
+    var api = this.modelFor('api');
     return Ember.RSVP.hash({
-      app: app,
-      statistic: this.store.find('statistic', app.id)
+      api: api,
+      statistic: this.store.find('statistic', api.id)
     });
   }
 });
