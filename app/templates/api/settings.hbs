@@ -1,3 +1,14 @@
 <section id="appArea">
-  settings
+  {{#each tier in model.tiers}}
+    <div class="api-tier" style="margin: 5px 0;">
+      {{#radio-button value=tier groupValue=model.api.tier
+        name='api-tier'}}
+        {{tier.name}}
+        {{humanize-number tier.quota}} requests per month
+        {{format-dolar tier.price}}/m
+      {{/radio-button}}
+    </div>
+  {{/each}}
+
+  <button {{action 'changeTier'}}>Change Tier</button>
 </section>
