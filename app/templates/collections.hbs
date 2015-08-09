@@ -3,23 +3,23 @@
     <i class="fa fa-search"></i><input placeholder="Search" type="text" />
   </div>
 
-  {{#each entity in model}}
-    {{view 'entities.details'}}
+  {{#each collection in model}}
+    {{view 'collections.details'}}
   {{/each}}
 
-  {{#link-to 'entities.new' class='newtable'}}
-    New Entity
+  {{#link-to 'collections.new' class='newtable'}}
+    New Collection
   {{/link-to}}
 </nav>
 
 <section id="contentHolder">
   <div class="row">
     <div class="tableWrapper">
-      {{#each entity in model}}
-        {{view 'entities.preview' entity=entity}}
+      {{#each collection in model}}
+        {{view 'collections.preview' collection=collection}}
       {{else}}
-        {{#link-to 'entities.new'}}
-          New Entity
+        {{#link-to 'collections.new'}}
+          New Collection
         {{/link-to}}
       {{/each}}
     </div>

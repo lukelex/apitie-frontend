@@ -1,8 +1,8 @@
 <h2>
-  {{entity.name}}
+  {{collection.name}}
 </h2>
 <ul>
-  {{#each field in entity.fields}}
+  {{#each field in collection.fields}}
     {{#unless field.internal}}
       {{field-label model=field action='openModal'}}
     {{/unless}}

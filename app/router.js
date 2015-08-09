@@ -19,7 +19,7 @@ export default Router.map(function() {
       this.route('js');
       this.route('android');
     });
-    this.resource('entities', function() {
+    this.resource('collections', function() {
       this.route('new');
     });
     this.route('data');

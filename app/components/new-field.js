@@ -5,8 +5,8 @@ export default Ember.Component.extend({
   classNames: 'new-field fa fa-plus',
   click: function() {
     var field = this.get('targetObject.store').createRecord('field', {
-      entity: this.entity
+      collection: this.collection
     });
-    this.sendAction('action', 'entities.inspector', field);
+    this.sendAction('action', 'collections.inspector', field);
   }
 });

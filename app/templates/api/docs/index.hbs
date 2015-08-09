@@ -26,7 +26,7 @@ of your request:</p>
   mode=start&number=4&order=desc.</li>
 </ul>
 
-<p>A request to create an entry in the books entity for a given
+<p>A request to create an entry in the books collection for a given
 app would provide:</p>
 
 <pre>
@@ -46,6 +46,6 @@ Parameters:
 }
 </pre>
 
-{{#each entity in model.entities}}
-  {{render 'api.docs.entity' entity}}
+{{#each collection in model.collections}}
+  {{render 'api.docs.collection' collection}}
 {{/each}}

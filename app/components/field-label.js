@@ -21,6 +21,6 @@ export default Ember.Component.extend({
     }
   }.property('model.type'),
   click: function() {
-    this.sendAction('action', 'entities.inspector', this.model);
+    this.sendAction('action', 'collections.inspector', this.model);
   }
 });

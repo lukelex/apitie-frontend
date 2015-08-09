@@ -26,12 +26,12 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.apiEndpoint = 'http://dev.rest-in.me:9292/api';
+    ENV.apiEndpoint = 'http://rest-in.dev:9292/api';
 
     ENV['simple-auth-token'] = {
-      serverTokenEndpoint: 'http://dev.rest-in.me:9292/api/login',
+      serverTokenEndpoint: 'http://rest-in.dev:9292/api/login',
       identificationField: 'email'
-    }
+    };
 
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -58,7 +58,7 @@ module.exports = function(environment) {
     ENV['simple-auth-token'] = {
       serverTokenEndpoint: 'http://lynx.restinme.c66.me/api/login',
       identificationField: 'email'
-    }
+    };
   }
 
   return ENV;

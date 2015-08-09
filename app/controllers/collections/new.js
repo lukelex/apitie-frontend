@@ -4,19 +4,19 @@ export default Ember.Controller.extend({
   needs: 'api',
   actions: {
     save: function() {
-      var newEntity = this.store.createRecord('entity', {
+      var newCollection = this.store.createRecord('collection', {
         name: this.get('name'),
         api: this.get('controllers.api').model
       });
 
-      newEntity.save();
+      newCollection.save();
 
       this.set('name', '');
 
-      this.transitionToRoute('entities');
+      this.transitionToRoute('collections');
     },
     cancel: function() {
-      this.transitionToRoute('entities');
+      this.transitionToRoute('collections');
     }
   }
 });

@@ -2,7 +2,7 @@
   <i class="fa fa-info"></i>
   <i class="fa fa-times" {{action 'cancel'}}></i>
   <h2>
-    {{model.entity.name}}#
+    {{model.collection.name}}#
     {{#if model.internal}}
       <span>{{model.name}}</span>
     {{else}}
@@ -44,32 +44,32 @@
       <li>
         <label>
           {{list-checkbox value='presence'
-            checked=model.validates
-            name='validates' disabled=model.internal}}
+            checked=model.validations
+            name='validations' disabled=model.internal}}
           Presence
         </label>
       </li>
       <li>
         <label>
           {{list-checkbox value='uniqueness'
-            checked=model.validates
-            name='validates' disabled=model.internal}}
+            checked=model.validations
+            name='validations' disabled=model.internal}}
           Uniqueness
         </label>
       </li>
       <li>
         <label>
           {{list-checkbox value='size'
-            checked=model.validates
-            name='validates' disabled=model.internal}}
+            checked=model.validations
+            name='validations' disabled=model.internal}}
           Size
         </label>
       </li>
       <li>
         <label>
           {{list-checkbox value='format'
-            checked=model.validates
-            name='validates' disabled=model.internal}}
+            checked=model.validations
+            name='validations' disabled=model.internal}}
           Format
         </label>
       </li>

@@ -1,0 +1,12 @@
+<h3>
+  <i class="fa fa-sort-desc" {{action 'toggleCollectionOpen' target=view bubbles=false}}></i>
+  <span class="collection-name">{{collection.name}}</span>
+  {{new-field collection=collection action='openModal'}}
+</h3>
+<ul class="table-list">
+  {{#each field in collection.fields}}
+    {{#field-label model=field action='openModal'}}
+      <i class="field-inspector fa fa-info"></i>
+    {{/field-label}}
+  {{/each}}
+</ul>

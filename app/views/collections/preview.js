@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  templateName: 'entities/preview',
+  templateName: 'collections/preview',
   classNames: 'table',
   publicFields: function() {
-    return this.get('entity').get('fields').filter(function(field) {
+    return this.get('collection').get('fields').filter(function(field) {
       return !field.get('internal');
     });
-  }.property('entity.fields'),
+  }.property('collection.fields'),
   extraPublicFields: function() {
     return this.get('publicFields').length - 5;
   }.property('publicFields'),

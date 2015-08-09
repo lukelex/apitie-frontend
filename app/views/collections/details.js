@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  templateName: 'entities/details',
+  templateName: 'collections/details',
   tagName: 'aside',
   open: false,
   active: false,
@@ -11,7 +11,7 @@ export default Ember.View.extend({
     this.set('active', true);
   },
   actions: {
-    toggleEntityOpen: function() {
+    toggleCollectionOpen: function() {
       this.set('open', !this.get('open'));
     },
     toggleInspector: function(field) {
