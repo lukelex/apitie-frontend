@@ -53,10 +53,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiEndpoint = 'http://lynx.restinme.c66.me/api';
+    ENV.apiEndpoint = 'http://dolphin.apitie.c66.me/api';
 
     ENV['simple-auth-token'] = {
-      serverTokenEndpoint: 'http://lynx.restinme.c66.me/api/login',
+      serverTokenEndpoint: 'http://dolphin.apitie.c66.me/api/login',
       identificationField: 'email'
     };
   }
