@@ -26,10 +26,10 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.apiEndpoint = 'http://rest-in.dev:9292/api';
+    ENV.apiEndpoint = 'http://rest-in.dev:9292/frontend';
 
     ENV['simple-auth-token'] = {
-      serverTokenEndpoint: 'http://rest-in.dev:9292/api/login',
+      serverTokenEndpoint: 'http://rest-in.dev:9292/frontend/login',
       identificationField: 'email'
     };
 
@@ -53,10 +53,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiEndpoint = 'http://dolphin.apitie.c66.me/api';
+    ENV.apiEndpoint = 'http://dolphin.apitie.c66.me/frontend';
 
     ENV['simple-auth-token'] = {
-      serverTokenEndpoint: 'http://dolphin.apitie.c66.me/api/login',
+      serverTokenEndpoint: 'http://dolphin.apitie.c66.me/frontend/login',
       identificationField: 'email'
     };
   }
